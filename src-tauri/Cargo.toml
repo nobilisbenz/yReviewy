@@ -1,6 +1,6 @@
 [package]
 name = "yreviewy"
-version = "0.1.0"
+version = "0.1.1"
 description = "A joyful pocket reviewer for yalive"
 edition = "2024"
 

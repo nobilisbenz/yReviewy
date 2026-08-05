@@ -59,7 +59,7 @@ jobs:
           test -n "${ANDROID_KEYSTORE_BASE64}" || { echo "ANDROID_KEYSTORE_BASE64 is not configured" >&2; exit 1; }
           printf '%s' "${ANDROID_KEYSTORE_BASE64}" | base64 --decode > /tmp/yreviewy-release.jks
           "${ANDROID_SDK_ROOT}/build-tools/36.0.0/zipalign" -p -f 4 \
-            src-tauri/gen/android/app/build/outputs/apk/arm64/release/app-arm64-release-unsigned.apk \
+            src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release-unsigned.apk \
             yreviewy-android-arm64-aligned.apk
           "${ANDROID_SDK_ROOT}/build-tools/36.0.0/apksigner" sign \
             --ks /tmp/yreviewy-release.jks \
